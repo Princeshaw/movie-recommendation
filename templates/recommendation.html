@@ -9,31 +9,24 @@
     <title>Awesome Search Box</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='./css/main.css') }}">
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='./css/') }}">
 
   </head>
   <!-- Coded with love by Mutiullah Samim-->
 
-  <body style="background-image: url({{ url_for('static',filename='img/movies.jpg') }});">
-    <div class="container h-100">
-    <form action="" method="POST">
-      <div class="d-flex justify-content-center h-100">
-      
-        <div class="searchbar">
-          <input class="search_input" type="text" name="movie" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-          <input type="submit" hidden>
-        </div>
-      </div>
-        </form>
-        <div class="container">
-          <ul>
+  <body>
+    <div class="container">
+    <br>
+    <br>
+     <div class="container">
+     If you liked {{ movie }} you may also like
+          <ol>
             {% for m in list_of_movies %}
 
                 <li> {{ m }}</li>
 
             {% endfor %}
-          </ul>
+          </ol>
         </div>
 
     </div>

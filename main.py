@@ -45,7 +45,7 @@ def home():
         rmd = recommendation(movie)
         print(rmd)
         # Handle POST Request here
-        return render_template('home.html')
+        return render_template('recommendation.html',movie=movie,list_of_movies = rmd)
     return render_template('home.html')
 
 if __name__ == '__main__':
