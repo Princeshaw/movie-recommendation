@@ -20,13 +20,24 @@
     <br>
      <div class="container">
      If you liked {{ movie }} you may also like
-          <ol>
-            {% for m in list_of_movies %}
+     
+     <table class="table table-striped w-auto">
+         <thead>
+             <th>Movies you may like</th>
+         </thead>
+          <tbody>
+            {% for m,g ,p in details %}
+            <tr class="table-info">
+            
 
-                <li> {{ m }}</li>
-
+                <td> {{ m }}</td>
+                <td> {{ g }}</td>
+                <td> <img height=200px src="https://image.tmdb.org/t/p/w500/{{ p }}"></td>
+            
+            </tr>
             {% endfor %}
-          </ol>
+          </tbody>
+      </table>    
         </div>
 
     </div>
